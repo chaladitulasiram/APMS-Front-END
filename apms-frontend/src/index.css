@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease;
+}
+
+/* Hide Scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+/* --- LIGHT MODE: CLEAN MESH --- */
+body:has([data-mui-color-scheme='light']) {
+  background-color: #F8FAFC;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(217,91%,95%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(250,90%,96%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 100%, hsla(200,90%,96%,1) 0, transparent 50%), 
+    radial-gradient(at 0% 100%, hsla(280,90%,96%,1) 0, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* --- DARK MODE: MIDNIGHT SLATE --- */
+body:has([data-mui-color-scheme='dark']) {
+  background-color: #0F172A;
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  background-attachment: fixed;
+}
